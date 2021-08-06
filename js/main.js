@@ -66,10 +66,9 @@ const checkInputs = (selector) => {
     if (count === 0) formSend();
 }
 
-let result;
-
 async function formSend() {
-    const form = document.querySelector('#form');
+    let form = document.querySelector('#form'),
+        result;
 
     let formData = new FormData(form);
     let response = await fetch('sendmail.php', {
