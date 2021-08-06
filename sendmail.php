@@ -12,7 +12,7 @@
 
 	$mail->setFrom($_POST['email']);
 
-	$mail->addAddress('youremailaddress@domain.com'); 
+	$mail->addAddress('kulikboxx@gmail.com'); 
 	// --Change your email address here -^^^
 
 	$mail->Subject = 'Message from your website www.domain.com';
@@ -36,9 +36,9 @@
 	$mail->Body = $body;
 
 	if (!$mail->send()) {
-		$message = 'Error';
+		$message = 'An error has occurred. Please reload the page and try again.';
 	} else {
-		$message = 'Your message was sent successfully :)';
+		$message = 'Your message was successfully sent! :)';
 	}
 
 	$response = ['message' => $message];

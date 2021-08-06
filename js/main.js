@@ -3,9 +3,7 @@
 const messages = {
     valueLength: 'Enter at least 5 characters!',
     email: 'Enter a valid email!',
-    phone: 'Enter a valid phone number!',
-    successfull: 'Your message was successfully sent. :)',
-    error: 'An error has occurred. Please reload the page and try again.'
+    phone: 'Enter a valid phone number!'
 }
 
 const showMessage = (field, alert) => {
@@ -81,10 +79,10 @@ async function formSend() {
 
     if (response.ok) {
         result = await response.json();
-        showModal(messages.successfull);
+        showModal(result.message);
         form.reset();
     } else {
-        showModal(messages.error);
+        showModal(result.message);
     }
 }
 
