@@ -12,7 +12,7 @@
 
 	$mail->setFrom($_POST['email']);
 
-	$mail->addAddress('kulikboxx@gmail.com'); 
+	$mail->addAddress('example@mail.com'); 
 	// --Change your email address here -^^^
 
 	$mail->Subject = 'Message from your website www.domain.com';
